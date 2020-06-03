@@ -1,4 +1,4 @@
-// Copyright 2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+x// Copyright 2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
 package cfn
 
@@ -35,4 +35,12 @@ func TestCloudFormationEventMarshaling(t *testing.T) {
 
 func TestCloudFormationMarshalingMalformedJson(t *testing.T) {
 	test.TestMalformedJson(t, Event{})
+}
+
+func TestWriteJson(t *testing.T) {
+
+	outputJSON, err := ioutil.WriteFile("./testdata/cloudformation-event.json",data []byte, perm os.FileMode)
+	if err != nil {
+		t.Errorf("could not write to test file. details: %v", err)
+	}test.TestMalformedJson(t, Event{})
 }
