@@ -1,6 +1,6 @@
 {
     "RequestType" : "Create",
-    "ResponseURL" : "https://garfeildshouse.s3.amazonaws.com/garfeild.jpg",
+    "ResponseURL" : "https://irishgarfield.s3-eu-west-1.amazonaws.com/garfeild.jpg",
     "StackId" : "arn:aws:cloudformation:us-west-2:EXAMPLE/stack-name/guid",
     "RequestId" : "unique id for this create request",
     "ResourceType" : "Custom::TestResource",
