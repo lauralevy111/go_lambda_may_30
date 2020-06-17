@@ -7,6 +7,6 @@
     "LogicalResourceId" : "MyTestResource",
     "ResourceProperties" : {
         "Name" : "Value",
-        "List" : [ "1", "2", "3", "4" ]
+        "List" : [ "1", "2", "3"]
     }
 }
