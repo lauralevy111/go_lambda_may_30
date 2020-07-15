@@ -41,7 +41,24 @@ func TestCopyLambdaLogStream(t *testing.T) {
 			}, nil
 		},
 	}
+	nc TestCopyLambdaLogStream2(t *testing.T) {
+		lgs := lambdacontext.LogStreamName
+		lambdacontext.LogStreamName = "DUMMYLOGSTREAMNAME"
 
+		client := &mockClient{
+			DoFunc: func(req *http.Request) (*http.Response, error) {
+				response := extractResponseBody(t, req)
+
+				assert.Equal(t, StatusSuccess, response.Status)
+				assert.Equal(t, testEvent.LogicalResourceID, response.LogicalResourceID)
+				assert.Equal(t, "DUMMYLOGSTREAMNAME", response.PhysicalResourceID)
+
+				return &http.Response{
+					StatusCode: http.StatusOK,
+					Body:       nopCloser{bytes.NewBufferString("")},
+				}, nil
+			},
+		}
 	fn := func(ctx context.Context, event Event) (physicalResourceID string, data map[string]interface{}, err error) {
 		return
 	}
