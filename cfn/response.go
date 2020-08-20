@@ -76,7 +76,7 @@ func (r *Response) sendWith(client httpClient) error {
 
 	if res.StatusCode != 200 {
 		log.Printf("StatusCode: %d\nBody: %v\n", res.StatusCode, string(body))
-		return fmt.Errorf("invalid status code. got: %d", res.StatusCode)
+		return fmt.Errorf("invalid status code. :( got: %d", res.StatusCode)
 	}
 
 	return nil
