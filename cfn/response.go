@@ -70,6 +70,7 @@ func (r *Response) sendWith(client httpClient) error {
 
 	body, err = ioutil.ReadAll(res.Body)
 	if err != nil {
+		log.Printf("readAll(res.Body)")
 		return err
 	}
 	res.Body.Close()
