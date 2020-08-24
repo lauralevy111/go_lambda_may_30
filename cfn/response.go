@@ -65,6 +65,7 @@ func (r *Response) sendWith(client httpClient) error {
 
 	res, err := client.Do(req)
 	if err != nil {
+		log.Printf("client.Do(req)")
 		return err
 	}
 
