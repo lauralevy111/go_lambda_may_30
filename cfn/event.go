@@ -5,6 +5,8 @@ package cfn
 // RequestType represents the types of requests that
 // come from a CloudFormation stack being run
 type RequestType string
+type RequestType int8
+
 
 const (
 	RequestCreate RequestType = "Create"
