@@ -17,7 +17,6 @@ type StatusType string
 const (
 	StatusSuccess StatusType = "SUCCESS"
 	StatusFailed  StatusType = "FAILED"
-	StatusUnsure 	StatusType = "hmmx"
 )
 
 // Response is a representation of a Custom Resource
