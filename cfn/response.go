@@ -61,12 +61,12 @@ func (r *Response) sendWith(client httpClient) error {
 		return err
 	}
 	req.Header.Del("Content-Type")
-
+/*
 	res, err := client.Do(req)
 	if err != nil {
 		log.Printf("client.Do(req)")
 		return err
-	}
+	}*/
 
 	body, err = ioutil.ReadAll(res.Body)
 	if err != nil {
