@@ -62,7 +62,8 @@ func (r *Response) sendWith(client httpClient) error {
 	}
 	req.Header.Del("Content-Type")
 
-	 res, err := client.Do(req)/*
+	 res, err := client.Do(req)
+	 /*
 	if err != nil {
 		log.Printf("client.Do(req)")
 		return err
