@@ -73,6 +73,8 @@ func (r *Response) sendWith(client httpClient) error {
 	if err != nil {
 		log.Printf(ioutil.ReadAll(res.Body))
 		return err
+		og.Printf(ioutil.ReadAll(res.Body))
+		return err
 	}
 	res.Body.Close()
 
